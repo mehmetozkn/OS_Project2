@@ -32,12 +32,13 @@ int main()
     fd = open(myfifo, O_WRONLY);
     write(fd, clientStart, sizeof(clientStart));
     close(fd);
-    printf("----- PROGRAM KOMUTLARI -----\n");
+    printf("---------- PROGRAM KOMUTLARI ----------\n");
     printf("Dosya Olusturmak Icin : create filename\n");
     printf("Dosyaya Veri Yazmak Icin : write filename input\n");
     printf("Dosyadan Veri Okumak Icin : read filename\n");
     printf("Dosyayı Silmek Icin : delete filename\n");
     printf("Programdan Cikis Yapmak Icin : exit\n");
+    printf("------------------------------------\n");
 
     while (exit)
     {
@@ -56,6 +57,8 @@ int main()
         close(fd);
         if (strcmp(input, "exit") == 0)
         {
+            // break yapıldığında manager dosyasından çıkış yapılmıyor.
+            printf("Clientten Cikis Yapiliyor...");
             exit = 0;
         }
         // Her işlemden sonra cliente response döndürme işlemi
