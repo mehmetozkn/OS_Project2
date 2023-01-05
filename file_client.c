@@ -32,6 +32,13 @@ int main()
     fd = open(myfifo, O_WRONLY);
     write(fd, clientStart, sizeof(clientStart));
     close(fd);
+    printf("----- PROGRAM KOMUTLARI -----\n");
+    printf("Dosya Olusturmak Icin : create filename\n");
+    printf("Dosyaya Veri Yazmak Icin : write filename input\n");
+    printf("Dosyadan Veri Okumak Icin : read filename\n");
+    printf("Dosyayı Silmek Icin : delete filename\n");
+    printf("Programdan Cikis Yapmak Icin : exit\n");
+
     while (exit)
     {
 
