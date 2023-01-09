@@ -1,2 +1,2 @@
 # OSProject2
-Operating Systems Project2
+Operating Systems Course Project2
